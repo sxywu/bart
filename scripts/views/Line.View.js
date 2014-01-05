@@ -2,12 +2,14 @@ define([
   "jquery",
   "underscore",
   "backbone",
-  "d3"
+  "d3",
+  "text!app/templates/Table.Template.html"
 ], function(
   $,
   _,
   Backbone,
-  d3
+  d3,
+  TableTemplate
 ) {
   return Backbone.View.extend({
     initialize: function() {
@@ -30,7 +32,13 @@ define([
         this.model.highlight();
         this.d3.classed("fade", false);
         this.clicked = true;
+
+        this.renderPlatform();
       }
+    },
+    renderPlatform: function() {
+      var range = _.range(20);
+      $("#platform").html(_.template(TableTemplate, {range: range, stations: this.model.stations}));
     }
   });
 })

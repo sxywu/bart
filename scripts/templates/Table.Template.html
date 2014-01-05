@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <td></td>
+<% _.each(range, function(i) { %>
+  <td class="section header">
+    <%= i + 1 %>
+  </td>
+<% }) %>
+  </tr>
+
+<% stations.each(function(station) { 
+  var ees = station.get("ees");
+  %>
+  <tr>
+    <td>
+      <%= station.get("name") %>
+    </td>
+    <% _.each(range, function(i) { %>
+      <td class="section">
+        <% if (_.contains(ees, i)) { %>
+          <div class="ees"></div>
+        <% } %>
+      </td>
+    <% }) %>
+  </tr>
+<% }) %>
+</table>

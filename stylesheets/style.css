@@ -1,11 +1,21 @@
 body {
-  background-color: #fafafa;
+  background-color: #fcfcfc;
+}
+
+/*
+bart svg
+********************************/
+#instructions {
+  width: 500px;
+  margin: 10px;
+  text-align: center;
 }
 
 svg#bart {
   margin: 20px;
   width:500px;
   height:450px;
+  float: left;
 }
 
 .line, .point {
@@ -18,6 +28,33 @@ text {
 
 .fade {
   opacity: .3;
+}
+
+/*
+platform
+********************************/
+#platform {
+  float: left;
+  margin: 3px;
+}
+
+.section {
+  min-width: 20px;
+  display: inline-block;
+  margin: 2px;
+}
+
+.section.header {
+  border-bottom: 1px solid #666;
+}
+
+.ees {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  border: 2px #000;
+  background-color: #666;
+  opacity: .5;
 }
 
 /*tips*/

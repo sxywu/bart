@@ -7,7 +7,6 @@ require.config({
         "bootstrap": "bootstrap",
         "d3": "d3.v3",
         "d3.tip": "d3.tip",
-        "topojson": "topojson.min",
         "mediator": "backbone-mediator"
     },
     shim: {
@@ -28,10 +27,6 @@ require.config({
             deps: ["d3"],
             exports: "d3.tip"
         },
-        "topojson": {
-            deps: ["d3"],
-            exports: "topojson"
-        },
         "mediator": {
             deps: ["underscore", "backbone"],
             exports: "mediator"
@@ -46,7 +41,6 @@ require([
     "bootstrap",
     "d3",
     "d3.tip",
-    "topojson",
     "app/views/App.View"
 ], function(
     $,
@@ -55,7 +49,6 @@ require([
     bootstrap,
     d3,
     tip,
-    topojson,
     AppView
 ) {
     var appView = new AppView();
